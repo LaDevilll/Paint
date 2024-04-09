@@ -49,7 +49,7 @@ namespace Paint
         bool _mouseClicked = false;
         Color SelectedColor
         {
-            get { return Color.Red; }
+            get { return Color.Blue; }
         }
          int SelectedSize
         {
@@ -57,11 +57,27 @@ namespace Paint
         }
         Brush _selectedBrush;
 
+
+
         private void button1_Click_1(object sender, EventArgs e)
         {
             _selectedBrush = new QuadBrush(SelectedColor, SelectedSize);
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            _selectedBrush = new CircleBr(SelectedColor, SelectedSize);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            _selectedBrush = new SprayBr(SelectedColor, SelectedSize);
+        }
 
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
@@ -141,10 +157,7 @@ namespace Paint
 
 
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        
 
         private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -158,5 +171,6 @@ namespace Paint
 
         }
 
+        
     }
 }
