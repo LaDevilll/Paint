@@ -9,7 +9,10 @@ namespace Paint
 {
     class SprayBr : Brush //Распылитель.
     {
-        public SprayBr(Color brushColor, int size) : base(brushColor, size) { }
+        public SprayBr(Color brushColor, int size) 
+            : base(brushColor, size) 
+        { 
+        }
         public bool DrawEveryTick = true;
         public override void Draw(Bitmap image, int x, int y)
         {

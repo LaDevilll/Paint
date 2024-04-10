@@ -15,14 +15,7 @@ namespace Paint
         public Form1()
         {
             InitializeComponent();
-            CreateBlank(pictureBox1.Width, pictureBox1.Height);
-        }
-
-      
-
-        Color DefaultColor
-        {
-            get { return Color.White; }
+            CreateBlank(2000, 1000);
         }
 
         void CreateBlank(int width, int height)
@@ -43,6 +36,10 @@ namespace Paint
             }
         }
 
+        Color DefaultColor
+        {
+            get { return Color.White; }
+        }
 
         int _x;
         int _y;
@@ -66,7 +63,7 @@ namespace Paint
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
+            _selectedBrush = new SnegBr(SelectedColor, SelectedSize);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -79,6 +76,20 @@ namespace Paint
             _selectedBrush = new SprayBr(SelectedColor, SelectedSize);
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            _selectedBrush = new LastikBr(SelectedSize);
+        }
+
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+
+            if (_selectedBrush != null)
+            {
+                _selectedBrush.Size = trackBar1.Value;
+            }
+        }
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {

@@ -19,6 +19,12 @@ namespace Paint
         public abstract void Draw(Bitmap image, int x, int y);
     }
 
+
+
+
+
+
+
     class QuadBrush : Brush
     {
         public QuadBrush(Color brushColor, int size)

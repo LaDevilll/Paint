@@ -41,6 +41,7 @@ namespace Paint
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolsPanel = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -120,6 +121,7 @@ namespace Paint
             this.drawPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.drawPanel.AutoScroll = true;
             this.drawPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.drawPanel.Controls.Add(this.pictureBox1);
             this.drawPanel.Location = new System.Drawing.Point(226, 24);
@@ -154,6 +156,7 @@ namespace Paint
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
@@ -166,6 +169,17 @@ namespace Paint
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Выбор кисти";
+            // 
+            // button6
+            // 
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(60, 113);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(107, 23);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Ластик";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -196,7 +210,7 @@ namespace Paint
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(98, 23);
             this.button2.TabIndex = 2;
-            this.button2.Text = "Прямоугольник";
+            this.button2.Text = "Снежинка";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -219,6 +233,7 @@ namespace Paint
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(214, 45);
             this.trackBar1.TabIndex = 0;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // Form1
             // 
@@ -262,6 +277,7 @@ namespace Paint
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
 
