@@ -44,17 +44,19 @@ namespace Paint
         int _x;
         int _y;
         bool _mouseClicked = false;
-        Color SelectedColor
+        public Color SelectedColor
         {
-            get { return Color.Blue; }
+            get
+            {
+                return colorDialog1.Color;
+            }
         }
-         int SelectedSize
+
+        int SelectedSize
         {
             get { return trackBar1.Value; }
         }
         Brush _selectedBrush;
-
-
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -81,7 +83,6 @@ namespace Paint
             _selectedBrush = new LastikBr(SelectedSize);
         }
 
-
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
 
@@ -102,13 +103,10 @@ namespace Paint
             _mouseClicked = true;
         }
 
-
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
             _mouseClicked = false;
         }
-
-
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
@@ -121,23 +119,29 @@ namespace Paint
             }
         }
 
-
-
-
-
-
-
-
-
-
-
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
 
+        private void SizeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CreateBlank(1000, 1000);
+            Size form = new Size();
+            form.ShowDialog();
+            if (form.Canceled == false)
+            {
+                CreateBlank(form.W, form.H);
+            }
+        }
 
+        private void newColorButton_Click(object sender, EventArgs e) //Выбор цвета из палитры
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                button7.BackColor = colorDialog1.Color;
+            }
+        }
 
 
 
