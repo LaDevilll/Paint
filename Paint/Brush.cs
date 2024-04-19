@@ -32,13 +32,17 @@ namespace Paint
         {
         }
 
-        public override void Draw (Bitmap image, int x, int y)
+        public override void Draw(Bitmap image, int x, int y)
         {
-            for (int y0 = y - Size; y0 < y + Size; ++y0)
+            //проверяем, что точка рисования находится в пределах изображения
+            if (x >= 0 && x < image.Width && y >= 0 && y < image.Height)
             {
-                for (int x0 = x - Size; x0 < x + Size; ++x0)
+                for (int y0 = Math.Max(0, y - Size); y0 < Math.Min(image.Height, y + Size); ++y0)
                 {
-                    image.SetPixel(x0, y0, BrushColor);
+                    for (int x0 = Math.Max(0, x - Size); x0 < Math.Min(image.Width, x + Size); ++x0)
+                    {
+                        image.SetPixel(x0, y0, BrushColor);
+                    }
                 }
             }
         }

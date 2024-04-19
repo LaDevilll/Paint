@@ -44,11 +44,16 @@ namespace Paint
         int _x;
         int _y;
         bool _mouseClicked = false;
+
         public Color SelectedColor
         {
             get
             {
                 return colorDialog1.Color;
+            }
+            set
+            {
+                colorDialog1.Color = value;
             }
         }
 
@@ -135,7 +140,7 @@ namespace Paint
             }
         }
 
-        private void newColorButton_Click(object sender, EventArgs e) //Выбор цвета из палитры
+        private void button7_Click(object sender, EventArgs e) //выбор цвета из палитры
         {
             if (colorDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -143,14 +148,45 @@ namespace Paint
             }
         }
 
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            SelectedColor = button.BackColor; 
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            SelectedColor = button.BackColor;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            SelectedColor = button.BackColor;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            SelectedColor = button.BackColor;
+        }
 
 
+        private void создатьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Size sizeForm = new Size();
+            DialogResult result = sizeForm.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                //если нажали ОК
+                int width = sizeForm.W;
+                int height = sizeForm.H;
+                string fileName = sizeForm.FileName;
+                CreateBlank(width, height);
+            }
 
-
-
-
-
-
+        }
 
 
 
@@ -186,6 +222,9 @@ namespace Paint
 
         }
 
-        
+        private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

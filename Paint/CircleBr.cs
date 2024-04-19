@@ -19,12 +19,10 @@ namespace Paint
             {
                 for (int x0 = x - Size; x0 < x + Size; ++x0)
                 {
-                    if ((x0 - x) * (x0 - x) + (y0 - y) * (y0 - y) <= Size * Size)
+                    //проверяем, что точка находится в пределах окружности и в пределах изображения
+                    if ((x0 - x) * (x0 - x) + (y0 - y) * (y0 - y) <= Size * Size && x0 >= 0 && x0 < image.Width && y0 >= 0 && y0 < image.Height)
                     {
-                        if (x0 >= 0 && x0 < image.Width && y0 >= 0 && y0 < image.Height)
-                        {
-                            image.SetPixel(x0, y0, BrushColor);
-                        }
+                        image.SetPixel(x0, y0, BrushColor);
                     }
                 }
             }
