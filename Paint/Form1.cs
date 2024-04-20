@@ -34,6 +34,7 @@ namespace Paint
             {
                 oldImage.Dispose();
             }
+            _selectedBrush = new QuadBrush(SelectedColor, SelectedSize);
         }
 
         Color DefaultColor
@@ -62,33 +63,32 @@ namespace Paint
             get { return trackBar1.Value; }
         }
         Brush _selectedBrush;
-
-        private void button1_Click_1(object sender, EventArgs e)
+        private void Quad_Click_1(object sender, EventArgs e)
         {
             _selectedBrush = new QuadBrush(SelectedColor, SelectedSize);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Sneg_Click(object sender, EventArgs e)
         {
             _selectedBrush = new SnegBr(SelectedColor, SelectedSize);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Circle_Click(object sender, EventArgs e)
         {
             _selectedBrush = new CircleBr(SelectedColor, SelectedSize);
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void Spray_Click(object sender, EventArgs e)
         {
             _selectedBrush = new SprayBr(SelectedColor, SelectedSize);
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void Lastik_Click(object sender, EventArgs e)
         {
             _selectedBrush = new LastikBr(SelectedSize);
         }
 
-        private void trackBar1_Scroll(object sender, EventArgs e)
+        private void BrushSize_Scroll(object sender, EventArgs e)
         {
 
             if (_selectedBrush != null)
@@ -139,39 +139,62 @@ namespace Paint
                 CreateBlank(form.W, form.H);
             }
         }
-
-        private void button7_Click(object sender, EventArgs e) //выбор цвета из палитры
+        private void button7_Click_1(object sender, EventArgs e)
         {
             if (colorDialog1.ShowDialog() == DialogResult.OK)
             {
-                button7.BackColor = colorDialog1.Color;
+                PalitraButton.BackColor = colorDialog1.Color;
+            }
+            Button button = (Button)sender;
+            SelectedColor = button.BackColor;
+            if (_selectedBrush != null)
+            {
+                _selectedBrush.BrushColor = SelectedColor;
             }
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            Button button = (Button)sender;
-            SelectedColor = button.BackColor; 
-        }
-
-        private void button9_Click(object sender, EventArgs e)
+        private void RedColor_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             SelectedColor = button.BackColor;
+            if (_selectedBrush !=null)
+            {
+                _selectedBrush.BrushColor = SelectedColor;
+            }
+
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void BlueColor_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             SelectedColor = button.BackColor;
+            if (_selectedBrush != null)
+            {
+                _selectedBrush.BrushColor = SelectedColor;
+            }
         }
 
-        private void button11_Click(object sender, EventArgs e)
+        private void GreenColor_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             SelectedColor = button.BackColor;
+            if (_selectedBrush != null)
+            {
+                _selectedBrush.BrushColor = SelectedColor;
+            }
         }
 
+            private void PurpleColor1_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            SelectedColor = button.BackColor;
+            if (_selectedBrush != null)
+            {
+                _selectedBrush.BrushColor = SelectedColor;
+            }
+        }
+
+        
 
         private void создатьToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -188,27 +211,29 @@ namespace Paint
 
         }
 
+        private void button12_Click(object sender, EventArgs e)
+        {
 
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-        private void label1_Click(object sender, EventArgs e)
+        private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
 
 
-        
+
+
+
+
+
+
+
+
+
+
+
 
         private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -222,9 +247,10 @@ namespace Paint
 
         }
 
-        private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
-        {
 
-        }
+
+        
+
+       
     }
 }
