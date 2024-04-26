@@ -66,6 +66,7 @@
             this.tbFileName.Name = "tbFileName";
             this.tbFileName.Size = new System.Drawing.Size(100, 20);
             this.tbFileName.TabIndex = 2;
+            this.tbFileName.Text = "Шедевр";
             this.tbFileName.TextChanged += new System.EventHandler(this.tbFileName_TextChanged);
             // 
             // tbWidth
@@ -74,6 +75,7 @@
             this.tbWidth.Name = "tbWidth";
             this.tbWidth.Size = new System.Drawing.Size(100, 20);
             this.tbWidth.TabIndex = 3;
+            this.tbWidth.Text = "2000";
             this.tbWidth.TextChanged += new System.EventHandler(this.tbWidth_TextChanged);
             // 
             // tbHeight
@@ -82,6 +84,7 @@
             this.tbHeight.Name = "tbHeight";
             this.tbHeight.Size = new System.Drawing.Size(100, 20);
             this.tbHeight.TabIndex = 4;
+            this.tbHeight.Text = "2000";
             this.tbHeight.TextChanged += new System.EventHandler(this.tbHeight_TextChanged);
             // 
             // label1

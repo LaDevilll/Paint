@@ -57,6 +57,7 @@ namespace Paint
         private void button1_Click_1(object sender, EventArgs e)
         {
             _canceled = false;
+            DialogResult = DialogResult.OK;
             Close();
         }
 

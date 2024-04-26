@@ -48,11 +48,17 @@
   <ItemGroup>
     <Compile Include="Brush.cs" />
     <Compile Include="CircleBr.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="paint.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="paint.Designer.cs">
+      <DependentUpon>paint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Save.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Save.Designer.cs">
+      <DependentUpon>Save.cs</DependentUpon>
     </Compile>
     <Compile Include="LastikBr.cs" />
     <Compile Include="Program.cs" />
@@ -65,8 +71,11 @@
     </Compile>
     <Compile Include="SnegBr.cs" />
     <Compile Include="SprayBr.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Save.resx">
+      <DependentUpon>Save.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="paint.resx">
+      <DependentUpon>paint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

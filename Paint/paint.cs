@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Paint
 {
-    public partial class Form1 : Form
+    public partial class paint : Form
     {
-        public Form1()
+        public paint()
         {
             InitializeComponent();
             CreateBlank(2000, 1000);
@@ -99,11 +100,11 @@ namespace Paint
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
-            if(_selectedBrush == null)
+            if (_selectedBrush == null)
             {
                 return;
             }
-            _selectedBrush.Draw (pictureBox1.Image as Bitmap, _x, _y);
+            _selectedBrush.Draw(pictureBox1.Image as Bitmap, _x, _y);
             pictureBox1.Refresh();
             _mouseClicked = true;
         }
@@ -157,7 +158,7 @@ namespace Paint
         {
             Button button = (Button)sender;
             SelectedColor = button.BackColor;
-            if (_selectedBrush !=null)
+            if (_selectedBrush != null)
             {
                 _selectedBrush.BrushColor = SelectedColor;
             }
@@ -184,7 +185,7 @@ namespace Paint
             }
         }
 
-            private void PurpleColor1_Click(object sender, EventArgs e)
+        private void PurpleColor1_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             SelectedColor = button.BackColor;
@@ -194,7 +195,10 @@ namespace Paint
             }
         }
 
-        
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
         private void создатьToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -216,17 +220,13 @@ namespace Paint
 
         }
 
+      
+
         private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Save SaveForm = new Save();
+            DialogResult result = SaveForm.ShowDialog();
         }
-
-
-
-
-
-
-
 
 
 
@@ -240,17 +240,12 @@ namespace Paint
 
         }
 
-        
+
 
         private void drawPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-
-
-        
-
-       
     }
 }
