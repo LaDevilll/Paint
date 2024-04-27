@@ -54,12 +54,6 @@
     <Compile Include="paint.Designer.cs">
       <DependentUpon>paint.cs</DependentUpon>
     </Compile>
-    <Compile Include="Save.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Save.Designer.cs">
-      <DependentUpon>Save.cs</DependentUpon>
-    </Compile>
     <Compile Include="LastikBr.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,9 +65,6 @@
     </Compile>
     <Compile Include="SnegBr.cs" />
     <Compile Include="SprayBr.cs" />
-    <EmbeddedResource Include="Save.resx">
-      <DependentUpon>Save.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="paint.resx">
       <DependentUpon>paint.cs</DependentUpon>
     </EmbeddedResource>

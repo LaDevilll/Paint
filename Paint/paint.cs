@@ -16,7 +16,7 @@ namespace Paint
         public paint()
         {
             InitializeComponent();
-            CreateBlank(2000, 1000);
+            CreateBlank(2000, 2000);
         }
 
         void CreateBlank(int width, int height)
@@ -224,8 +224,15 @@ namespace Paint
 
         private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Save SaveForm = new Save();
-            DialogResult result = SaveForm.ShowDialog();
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK);
+            {
+
+ g
+
+            }
+
+
         }
 
 
