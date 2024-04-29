@@ -66,7 +66,7 @@ namespace Paint
             this.файлToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1128, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1924, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -109,7 +109,7 @@ namespace Paint
             this.drawPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.drawPanel.Location = new System.Drawing.Point(229, 24);
             this.drawPanel.Name = "drawPanel";
-            this.drawPanel.Size = new System.Drawing.Size(899, 698);
+            this.drawPanel.Size = new System.Drawing.Size(1695, 1037);
             this.drawPanel.TabIndex = 1;
             this.drawPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanel_Paint);
             // 
@@ -118,7 +118,7 @@ namespace Paint
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(932, 676);
+            this.pictureBox1.Size = new System.Drawing.Size(1695, 1037);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -138,7 +138,7 @@ namespace Paint
             this.toolsPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.toolsPanel.Location = new System.Drawing.Point(0, 24);
             this.toolsPanel.Name = "toolsPanel";
-            this.toolsPanel.Size = new System.Drawing.Size(229, 698);
+            this.toolsPanel.Size = new System.Drawing.Size(229, 1037);
             this.toolsPanel.TabIndex = 2;
             // 
             // button12
@@ -300,7 +300,7 @@ namespace Paint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1128, 722);
+            this.ClientSize = new System.Drawing.Size(1924, 1061);
             this.Controls.Add(this.drawPanel);
             this.Controls.Add(this.toolsPanel);
             this.Controls.Add(this.menuStrip1);

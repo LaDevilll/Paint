@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Paint
         public paint()
         {
             InitializeComponent();
-            CreateBlank(2000, 2000);
+            CreateBlank(1500, 1000);
         }
 
         void CreateBlank(int width, int height)
@@ -211,6 +212,7 @@ namespace Paint
                 int height = sizeForm.H;
                 string fileName = sizeForm.FileName;
                 CreateBlank(width, height);
+                pictureBox1.Image.Save(fileName, System.Drawing.Imaging.ImageFormat.Png);
             }
 
         }
@@ -220,20 +222,22 @@ namespace Paint
 
         }
 
-      
 
         private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK);
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-
- g
-
+                string filePath = saveFileDialog1.FileName;
+                Bitmap imageToSave = pictureBox1.Image as Bitmap;
+                if (imageToSave != null)
+                {
+                    imageToSave.Save(filePath, System.Drawing.Imaging.ImageFormat.Png);
+                    MessageBox.Show("Изображение успешно сохранено", "Сохранение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-
-
         }
+
+
 
 
 
