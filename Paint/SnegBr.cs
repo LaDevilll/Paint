@@ -38,22 +38,19 @@ namespace Paint
                 }
             }
 
-            for (int k = -radius; k <= radius; k++) // диагональные
+            //for (int k = -radius; k <= radius; k++) // диагональные
+            
+            int z = (int)Math.Sqrt(radius * radius / 2);
+            for (int k = -z; k <= z; k++)
+            
             {
+                
                 int diagX1 = centerX + k;
                 int diagY1 = centerY + k;
                 int diagX2 = centerX - k;
                 int diagY2 = centerY + k;
-
-                if (diagX1 >= 0 && diagX1 < image.Width && diagY1 >= 0 && diagY1 < image.Height) // проверка на допустимые пределы
-                {
-                    image.SetPixel(diagX1, diagY1, BrushColor);
-                }
-
-                if (diagX2 >= 0 && diagX2 < image.Width && diagY2 >= 0 && diagY2 < image.Height) // проверка на допустимые пределы
-                {
-                    image.SetPixel(diagX2, diagY2, BrushColor);
-                }
+                image.SetPixel(diagX1, diagY1, BrushColor);
+                image.SetPixel(diagX2, diagY2, BrushColor);
             }
         }
     }

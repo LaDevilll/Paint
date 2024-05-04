@@ -8,11 +8,12 @@ using System.Threading.Tasks;
 namespace Paint
 {
      class LastikBr : Brush
-    {
+     {
         public LastikBr(int size)
             : base(Color.White, size) // Цвет ластика - белый, чтобы он закрашивал пиксели изображения
-        {
-        }
+        { }
+
+
 
         public override void Draw(Bitmap image, int x, int y)
         {
@@ -23,6 +24,8 @@ namespace Paint
                         image.SetPixel(x0, y0, BrushColor);
                 }
             }
+           
         }
-    }
+     }
+
 }

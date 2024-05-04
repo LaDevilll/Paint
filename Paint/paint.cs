@@ -163,6 +163,10 @@ namespace Paint
             {
                 _selectedBrush.BrushColor = SelectedColor;
             }
+            if (_selectedBrush is LastikBr)
+            {
+                _selectedBrush.BrushColor = Color.White;
+            }
 
         }
 

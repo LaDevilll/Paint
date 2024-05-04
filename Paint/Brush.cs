@@ -47,4 +47,25 @@ namespace Paint
             }
         }
     }
+
+
+    //class Plus : Brush
+    //{
+    //    public Plus(Color brushColor, int size)
+    //        : base(brushColor, size)
+    //    {
+    //    }
+
+    //    public override void Draw(Bitmap image, int x, int y)
+    //    {
+    //        for (int i = -Size; i <= Size; i++) 
+    //        {
+    //            int newX = x + i;
+    //            image.SetPixel(newX, y, BrushColor);
+    //            int newY = y + j;
+    //            image.SetPixel(x, newY, BrushColor);
+    //        }
+
+    //    }
+    //}
 }
