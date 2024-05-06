@@ -153,9 +153,13 @@ namespace Paint
             {
                 _selectedBrush.BrushColor = SelectedColor;
             }
+            if (_selectedBrush is LastikBr)
+            {
+                _selectedBrush.BrushColor = Color.White;
+            }
         }
 
-        private void RedColor_Click(object sender, EventArgs e)
+        private void Color_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             SelectedColor = button.BackColor;
@@ -168,36 +172,6 @@ namespace Paint
                 _selectedBrush.BrushColor = Color.White;
             }
 
-        }
-
-        private void BlueColor_Click(object sender, EventArgs e)
-        {
-            Button button = (Button)sender;
-            SelectedColor = button.BackColor;
-            if (_selectedBrush != null)
-            {
-                _selectedBrush.BrushColor = SelectedColor;
-            }
-        }
-
-        private void GreenColor_Click(object sender, EventArgs e)
-        {
-            Button button = (Button)sender;
-            SelectedColor = button.BackColor;
-            if (_selectedBrush != null)
-            {
-                _selectedBrush.BrushColor = SelectedColor;
-            }
-        }
-
-        private void PurpleColor1_Click(object sender, EventArgs e)
-        {
-            Button button = (Button)sender;
-            SelectedColor = button.BackColor;
-            if (_selectedBrush != null)
-            {
-                _selectedBrush.BrushColor = SelectedColor;
-            }
         }
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)

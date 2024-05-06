@@ -37,14 +37,10 @@ namespace Paint
                     image.SetPixel(centerX, newY, BrushColor);
                 }
             }
-
-            //for (int k = -radius; k <= radius; k++) // диагональные
             
             int z = (int)Math.Sqrt(radius * radius / 2);
-            for (int k = -z; k <= z; k++)
-            
-            {
-                
+            for (int k = -z; k <= z; k++)           
+            {              
                 int diagX1 = centerX + k;
                 int diagY1 = centerY + k;
                 int diagX2 = centerX - k;

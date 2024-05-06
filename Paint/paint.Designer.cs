@@ -37,7 +37,6 @@ namespace Paint
             this.drawPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolsPanel = new System.Windows.Forms.Panel();
-            this.button12 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -66,7 +65,7 @@ namespace Paint
             this.файлToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1951, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1924, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -109,7 +108,7 @@ namespace Paint
             this.drawPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.drawPanel.Location = new System.Drawing.Point(229, 24);
             this.drawPanel.Name = "drawPanel";
-            this.drawPanel.Size = new System.Drawing.Size(1722, 1037);
+            this.drawPanel.Size = new System.Drawing.Size(1695, 1037);
             this.drawPanel.TabIndex = 1;
             this.drawPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanel_Paint);
             // 
@@ -128,7 +127,6 @@ namespace Paint
             // 
             // toolsPanel
             // 
-            this.toolsPanel.Controls.Add(this.button12);
             this.toolsPanel.Controls.Add(this.button10);
             this.toolsPanel.Controls.Add(this.button9);
             this.toolsPanel.Controls.Add(this.button11);
@@ -141,59 +139,49 @@ namespace Paint
             this.toolsPanel.Size = new System.Drawing.Size(229, 1037);
             this.toolsPanel.TabIndex = 2;
             // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.White;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(160, 173);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(30, 30);
-            this.button12.TabIndex = 6;
-            this.button12.UseVisualStyleBackColor = false;
-            // 
             // button10
             // 
             this.button10.BackColor = System.Drawing.Color.Green;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(84, 173);
+            this.button10.Location = new System.Drawing.Point(128, 173);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(30, 30);
             this.button10.TabIndex = 5;
             this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.GreenColor_Click);
+            this.button10.Click += new System.EventHandler(this.Color_Click);
             // 
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.Aqua;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(48, 173);
+            this.button9.Location = new System.Drawing.Point(74, 173);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(30, 30);
             this.button9.TabIndex = 4;
             this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.BlueColor_Click);
+            this.button9.Click += new System.EventHandler(this.Color_Click);
             // 
             // button11
             // 
             this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(120, 173);
+            this.button11.Location = new System.Drawing.Point(174, 173);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(30, 30);
             this.button11.TabIndex = 3;
             this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.PurpleColor1_Click);
+            this.button11.Click += new System.EventHandler(this.Color_Click);
             // 
             // button8
             // 
             this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(12, 173);
+            this.button8.Location = new System.Drawing.Point(26, 173);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(30, 30);
             this.button8.TabIndex = 2;
             this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.RedColor_Click);
+            this.button8.Click += new System.EventHandler(this.Color_Click);
             // 
             // groupBox1
             // 
@@ -283,7 +271,7 @@ namespace Paint
             // 
             this.PalitraButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.PalitraButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PalitraButton.Location = new System.Drawing.Point(12, 209);
+            this.PalitraButton.Location = new System.Drawing.Point(26, 209);
             this.PalitraButton.Name = "PalitraButton";
             this.PalitraButton.Size = new System.Drawing.Size(178, 27);
             this.PalitraButton.TabIndex = 1;
@@ -300,7 +288,7 @@ namespace Paint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1951, 1061);
+            this.ClientSize = new System.Drawing.Size(1924, 1061);
             this.Controls.Add(this.drawPanel);
             this.Controls.Add(this.toolsPanel);
             this.Controls.Add(this.menuStrip1);
@@ -342,7 +330,6 @@ namespace Paint
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
